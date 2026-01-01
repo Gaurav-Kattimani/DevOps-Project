@@ -1,4 +1,9 @@
-def check_loan_eligibility(name, account_no, income, credit_score):
+def check_loan_eligibility(
+    name="Rahul Sharma",
+    account_no="ACC1001",
+    income=50000.0,
+    credit_score=720
+):
     if credit_score >= 750:
         status = "Loan Approved"
     elif 650 <= credit_score < 750:
@@ -16,12 +21,9 @@ def check_loan_eligibility(name, account_no, income, credit_score):
 
 
 if __name__ == "__main__":
-    name = input("Enter customer name: ")
-    account_no = input("Enter account number: ")
-    income = float(input("Enter monthly income: "))
-    credit_score = int(input("Enter credit score: "))
 
-    result = check_loan_eligibility(name, account_no, income, credit_score)
+    # Default execution (no user input)
+    result = check_loan_eligibility()
 
     print("\n--- Loan Eligibility Result ---")
     for key, value in result.items():
